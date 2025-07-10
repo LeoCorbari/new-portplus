@@ -4,36 +4,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {},
+            },
+            plugins: [],
+        }
+    </script>
     <title>AmperPort+</title>
-    <script src="script/jquery.js"></script>
+    <!-- Removido: <script src="script/jquery.js"></script> se não for usado -->
     <script src="script/script.js"></script>
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
 </head>
 
-<body>
-    <div class="corpo">
-        <div class="titulo">
-            Amper<span class="port"><b>Port+</b></span>
-        </div>
-        <div class="template">
-            <div class="centro-select">
-                <div class="imagem-texto">
-                    <div class="imagem">
-                        <input type="image" src="img/telephone_logo.svg" onclick="escolher()" width="131" height="131">
-                    </div>
-                    <div class="texto">
-                        <input id="total" type="text" class="input-nr" placeholder="Quantas portabilidades tem hoje ?">
-                    </div>
-                </div>
-            </div>
-            <div class="rodape">
-                <span class="develop">Sistema desenvolvido por Leonardo Corbari</span>
-            </div>
-        </div>
+<body
+    class="bg-gradient-to-br from-gray-50 to-gray-200 dark:from-gray-900 dark:to-gray-800 min-h-screen flex flex-col transition-colors duration-300">
 
+    <div id="splash-screen" class="fixed inset-0 flex items-center justify-center bg-white dark:bg-gray-900 z-50">
+        <h1 class="text-4xl font-extrabold text-gray-800 dark:text-white">
+            <span class="animated-letter">A</span><span class="animated-letter">m</span><span
+                class="animated-letter">p</span><span class="animated-letter">e</span><span
+                class="animated-letter">r</span><span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-pink-600 animated-letter">
+                Port+
+            </span>
+        </h1>
     </div>
 
+
+    <header class="bg-white/80 backdrop-blur-sm shadow-sm py-6 dark:bg-gray-900/80">
+        <div class="container mx-auto px-4 flex justify-center items-center relative">
+            <h1 class="text-4xl font-extrabold text-gray-800 dark:text-white">
+                Amper<span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-pink-600">Port+</span>
+            </h1>
+            <!-- Botão para alternar Dark Mode -->
+            <button id="darkModeToggle"
+                class="absolute right-4 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 flex items-center justify-center h-10 w-10 rounded-full">
+                <span id="darkModeIcon" class="block h-5 w-5 flex items-center justify-center">
+                    <!-- O SVG será injetado aqui via JavaScript -->
+                </span>
+            </button>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-8 flex items-center justify-center">
+        <div
+            class="w-full max-w-2xl bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg p-8 dark:bg-gray-800/80 dark:shadow-xl transition-colors duration-300">
+            <div class="mb-6">
+                <h2 class="text-xl font-semibold text-gray-700 mb-2 dark:text-gray-200">Números para Portar</h2>
+                <textarea id="terminaisInput"
+                    class="w-full h-64 p-4 rounded-xl border-2 border-gray-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition shadow-sm dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:focus:border-blue-400 dark:focus:ring-blue-800/50"
+                    placeholder="Insira os números de telefone"></textarea>
+            </div>
+
+            <div class="text-center">
+                <button onclick="gerarCSV()"
+                    class="px-10 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-lg font-semibold rounded-xl shadow-lg hover:from-blue-600 hover:to-indigo-700 transition-all transform hover:scale-[1.02] focus:outline-none focus:ring-4 focus:ring-blue-300/50 dark:from-blue-600 dark:to-indigo-700 dark:hover:from-blue-700 dark:hover:to-indigo-800 dark:focus:ring-blue-700/50">
+                    <div class="flex items-center justify-center gap-2">
+                        <svg id="csvIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                        <span id="csvText">Gerar Arquivos CSV</span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </main>
+    <div id="toast-container" class="fixed bottom-4 right-4 z-50 space-y-2 w-full max-w-xs">
+        <!-- Toast notifications will appear here -->
+    </div>
+    <footer
+        class="bg-white/80 backdrop-blur-sm py-4 text-center text-sm text-gray-500 dark:bg-gray-900/80 dark:text-gray-400">
+        Sistema desenvolvido por Leonardo Corbari © 2023
+    </footer>
 </body>
 
 </html>
