@@ -38,7 +38,7 @@ function populatePrefixData() {
     addPrefixData([463562, 462023], { sbc: "sbcproc01", code: "42306", area: "MFNP", description: "Rota CLIENTE", city: "Manfrinopolis", ddd: "427", sbcCode: "55216", type: "190" });
     addPrefixData([463538, 463016, 463191], { sbc: "sbcproc01", code: "41622", area: "STL", description: "Rota CLIENTE", city: "Salto do Lontra", ddd: "465", sbcCode: "55216", type: "190" });
     addPrefixData([463542, 462035, 463177], { sbc: "sbcproc01", code: "41657", area: "SZE", description: "Rota CLIENTE", city: "Santa Izabel do Oeste", ddd: "427", sbcCode: "55216", type: "190" });
-    addPrefixData([443280, 443514, 443642, 443911, 442036, 443149, 443683, 443638], { sbc: "sbcproc01", code: "41054", area: "ASD", description: "Rota CLIENTE", city: "Assis Chateaubriand", ddd: "449", sbcCode: "55216", type: "190" });
+    addPrefixData([443280, 443514, 443642, 443911, 442036, 443149, 443683, 443638, 443648], { sbc: "sbcproc01", code: "41054", area: "ASD", description: "Rota CLIENTE", city: "Assis Chateaubriand", ddd: "449", sbcCode: "55216", type: "190" });
     addPrefixData([422122, 423310, 423751, 423232, 423233, 423249, 423906, 423125], { sbc: "sbcproc01", code: "41136", area: "CAT", description: "Rota CLIENTE", city: "Castro", ddd: "422", sbcCode: "55216", type: "190" });
     addPrefixData([423848, 423080, 423240, 423318, 423446, 423908, 423145, 423043], { sbc: "sbcproc01", code: "41523", area: "PDT", description: "Rota CLIENTE", city: "Prudentopolis", ddd: "424", sbcCode: "55216", type: "190" });
     addPrefixData([423231, 423915, 423151], { sbc: "sbcproc01", code: "41130", area: "CBQ", description: "Rota CLIENTE", city: "Carambei", ddd: "424", sbcCode: "55216", type: "190" });
