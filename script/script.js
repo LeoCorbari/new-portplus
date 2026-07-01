@@ -43,6 +43,7 @@ function populatePrefixData() {
     addPrefixData([423848, 423080, 423240, 423318, 423446, 423908, 423145, 423043], { sbc: "sbcproc01", code: "41523", area: "PDT", description: "Rota CLIENTE", city: "Prudentopolis", ddd: "424", sbcCode: "55216", type: "190" });
     addPrefixData([423231, 423915, 423151], { sbc: "sbcproc01", code: "41130", area: "CBQ", description: "Rota CLIENTE", city: "Carambei", ddd: "424", sbcCode: "55216", type: "190" });
     addPrefixData([453320, 453299, 452055, 452103, 453373, 453421, 453165, 453536, 453020, 452078, 453252, 453277, 453278, 453313, 453378, 453379, 453380, 453903, 452035, 453125, 453053, 453054, 453055, 453056, 453057, 453065, 454054, 452434, 452470, 452482, 452484, 452488, 452517, 452528, 452554, 452558, 454102, 453196, 453256], { sbc: "sbcproc01", code: "41695", area: "TOO", description: "Rota CLIENTE", city: "Toledo", ddd: "452", sbcCode: "55216", type: "190" });
+    addPrefixData([413608, 413797, 413552, 413607, 413604, 413643, 413031], { sbc: "sbcproc01", code: "41000", area: "CTA", description: "Rota CLIENTE", city: "Curitiba", ddd: "412", sbcCode: "55216", type: "190" });
 }
 
 // Chama a função para popular os dados de prefixo uma vez ao carregar o script
