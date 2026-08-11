@@ -223,7 +223,7 @@ function gerarPlanoDeDiscagem(terminais) {
         csvPlanoDeDisc += ";;" + "10";
         csvPlanoDeDisc += ";" + "A cobrar CLIENTE" + ";";
         csvPlanoDeDisc += "\n";
-        csvPlanoDeDisc += "^0(14|21|31|41|43|15|25|99)" + terminal + "$";
+        csvPlanoDeDisc += "^0(14|21|31|41|43|15|12|25|99)" + terminal + "$";
         csvPlanoDeDisc += ";" + "3";
         csvPlanoDeDisc += ";;" + "10";
         csvPlanoDeDisc += ";" + "LDN CLIENTE" + ";";
